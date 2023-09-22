@@ -1,7 +1,8 @@
-# Docker node Vagrantfile #
+# Deployment of Corteza using docker-compose on Vagrant #
 
-This repository contains a Vagrantfile that will setup an ubuntu xenial box and install docker in it.
+This repository contains a Vagrantfile that will setup an ubuntu focal box and install docker and docker-compose in it.
 
+The /vagrant folder contains the docker-compose.yml file.
 
 ### How do I get set up? ###
 
@@ -12,5 +13,6 @@ This repository contains a Vagrantfile that will setup an ubuntu xenial box and 
 ```bash
 vagrant up
 vagrant ssh
-docker run --rm hello-world
+cd /vagrant
+docker-compose up -d
 ```
